@@ -11,5 +11,10 @@ public class BowlingGameTest {
 	public void itCompiles() {
 		assertThat(true, equalTo(true));;
 	}
+	
+	@Test
+	public void testGutterGame(){
+		Game = new Game();
+	}
 
 }
