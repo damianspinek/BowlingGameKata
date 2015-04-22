@@ -14,7 +14,7 @@ public class BowlingGameTest {
 	
 	@Test
 	public void testGutterGame(){
-		Game = new Game();
+		Game game = new Game();
 	}
 
 }
