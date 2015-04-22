@@ -3,8 +3,8 @@ public class Game {
 
 	private int score;
 
-	public void roll(int i) {
-		score+=i;
+	public void roll(int pins) {
+		score+=pins;
 		
 	}
 
