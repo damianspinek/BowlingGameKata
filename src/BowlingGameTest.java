@@ -12,8 +12,9 @@ public class BowlingGameTest {
 	@Test
 	public void itCompiles() {
 		assertThat(true, equalTo(true));
-		
+
 	}
+
 	@Before
 	public void setUp() throws Exception {
 		game = new Game();
@@ -32,14 +33,24 @@ public class BowlingGameTest {
 		rollMany(20, 1);
 		assertEquals(20, game.score());
 	}
-	
+
 	@Test
-	public void testOneSpare(){
+	public void testOneSpare() {
 		rollSpare();
 		game.roll(3);
 		rollMany(17, 0);
 		assertEquals(16, game.score());
 	}
+
+	@Test
+	public void testOneStrike() throws Exception {
+		game.roll(10); // strike
+		game.roll(3);
+		game.roll(4);
+		rollMany(16, 0);
+		assertEquals(24, game.score());
+	}
+
 	private void rollSpare() {
 		game.roll(5);
 		game.roll(5);
@@ -50,6 +61,5 @@ public class BowlingGameTest {
 			game.roll(pins);
 		}
 	}
-
 
 }
