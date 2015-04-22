@@ -1,14 +1,16 @@
 
 public class Game {
 
+	private int score;
+
 	public void roll(int i) {
-		// TODO Auto-generated method stub
+		score+=i;
 		
 	}
 
 	public int score() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return score;
 	}
 
 }
